@@ -4,5 +4,17 @@
     "express": "^4.18.2",
     "mongodb": "^6.1.0",
     "mongoose": "^7.6.1"
-  }
+  },
+  "name": "tp2-cesinha",
+  "description": "Cesinha aulinhas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "dev": "devouprod=dev db.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

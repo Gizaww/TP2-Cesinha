@@ -21,7 +21,7 @@ const modelodeUsuario = mongoose.model('contas', new mongoose.Schema({
     password: String
 }))
 
-mongoose.connect(process.env.dadosdebancos)
+mongoose.connect("mongodb://127.0.0.1:27017/newdeal")
 .then(function(){
 
 app.get('/get/:email', async (req,res)=>{

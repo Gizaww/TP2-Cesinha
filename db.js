@@ -24,8 +24,11 @@ const modelodeUsuario = mongoose.model('contas', new mongoose.Schema({
 mongoose.connect("mongodb://127.0.0.1:27017/newdeal")
 .then(function(){
 
-app.get('/get/:email', async (req,res)=>{
-    const usuarioEncontrado = await modelodeUsuario.findOne({email: req.params.email})
+app.post('/get/', async (req,res)=>{
+    const usuarioEncontrado = await modelodeUsuario.findOne({email: req.body.email, password: req.body.password})
+    if(usuarioEncontrado ===null){
+        return res.send("Essa conta não existe meu mano")
+    }
     console.log(usuarioEncontrado);
     res.send(usuarioEncontrado)
 })

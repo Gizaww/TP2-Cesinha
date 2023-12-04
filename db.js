@@ -48,7 +48,7 @@ app.put('/put', async (req,res)=>{
 })
   
 app.put('/putmusic', async (req,res)=>{
-    const museAtualizado = await modelodeUsuario.findOneAndUpdate({namemusic: req.body.music, musicstyle: req.body.musicstyle}, {namemusic: req.body.newnamemusic, msucistyle: req.body.newmusicstyle})
+    const museAtualizado = await modelodeUsuario.findOneAndUpdate({namemusic: req.body.music, musicstyle: req.body.musicstyle}, {namemusic: req.body.newnamemusic, musicstyle: req.body.newmusicstyle})
     res.send(museAtualizado)
 })
 
